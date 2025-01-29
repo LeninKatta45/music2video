@@ -71,7 +71,7 @@ function App() {
         if (audioFile){
             formData.append('audio_file', audioFile);
         } else {
-            formData.append('url', url)
+            formData.append('url', url);
         }
         formData.append('theme', theme);
         formData.append('color_pattern', colorPattern);
@@ -126,9 +126,7 @@ function App() {
     try {
       const formData = new FormData();
       formData.append("video_file", videoFile);
-      if (audioFile) {
-        formData.append("audio_file", audioFile as Blob);
-      }
+      formData.append("audio_path", videoData.audio_path); // send the audio path that was returned from the prompt
 
        formData.append("tempo", String(videoData.tempo));
        formData.append("sr", String(videoData.sr));
