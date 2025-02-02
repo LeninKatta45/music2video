@@ -80,7 +80,7 @@ function App() {
         formData.append('animation_type', animationType);
 
         try {
-            const response = await axios.post('https://6857-2409-408c-159d-6a62-5038-c6ec-92a3-ad6b.ngrok-free.app/generate_prompt/', formData, { // Make POST request to /generate_prompt endpoint
+            const response = await axios.post('https://2992-103-56-30-33.ngrok-free.app/generate_prompt/', formData, { // Make POST request to /generate_prompt endpoint
                 headers: {
                     'Content-Type': 'multipart/form-data', // set content type to multi part form data to send files and data
                 },
@@ -133,7 +133,7 @@ function App() {
        formData.append("significant_points_str", JSON.stringify(videoData.significant_points));
 
       const response = await axios.post(
-        "https://6857-2409-408c-159d-6a62-5038-c6ec-92a3-ad6b.ngrok-free.app/process_video/",
+        "https://2992-103-56-30-33.ngrok-free.app/process_video/",
         formData,
         {
           headers: {
